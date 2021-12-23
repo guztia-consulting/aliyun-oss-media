@@ -2,7 +2,7 @@
 
 abstract class AS3CF_Plugin_Base {
 
-	const DBRAINS_URL = 'https://deliciousbrains.com';
+	const GUZTIA_URL = 'https://guztia.com';
 
 	const SETTINGS_KEY = '';
 
@@ -655,13 +655,13 @@ abstract class AS3CF_Plugin_Base {
 	 *
 	 * @return string
 	 */
-	public function dbrains_url( $path, $args = array(), $hash = '' ) {
+	public function guztia_url( $path, $args = array(), $hash = '' ) {
 		$args = wp_parse_args( $args, array(
 			'utm_medium' => 'insideplugin',
 			'utm_source' => $this->get_utm_source(),
 		) );
 		$args = array_map( 'urlencode', $args );
-		$url  = trailingslashit( self::DBRAINS_URL ) . ltrim( $path, '/' );
+		$url  = trailingslashit( self::GUZTIA_URL ) . ltrim( $path, '/' );
 		$url  = add_query_arg( $args, $url );
 
 		if ( $hash ) {
@@ -689,6 +689,6 @@ abstract class AS3CF_Plugin_Base {
 	 * @return string
 	 */
 	public function get_my_account_url( $args = array(), $hash = '' ) {
-		return $this->dbrains_url( '/my-account/', $args, $hash );
+		return $this->guztia_url( '/my-account/', $args, $hash );
 	}
 }

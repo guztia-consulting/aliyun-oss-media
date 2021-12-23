@@ -274,7 +274,7 @@ $storage_classes = apply_filters( 'as3cf_media_tab_storage_classes', $storage_cl
 		?>
 		<p class="as3cf-need-help">
 			<span class="dashicons dashicons-info"></span>
-			<?php printf( __( 'Need help getting your Access Keys? <a href="%s">Check out the Quick Start Guide &rarr;</a>', 'amazon-s3-and-cloudfront' ), $this->dbrains_url( '/wp-offload-media/doc/quick-start-guide/', array(
+			<?php printf( __( 'Need help getting your Access Keys? <a href="%s">Check out the Quick Start Guide &rarr;</a>', 'amazon-s3-and-cloudfront' ), $this->guztia_url( '/wp-offload-media/doc/quick-start-guide/', array(
 				'utm_campaign' => 'support+docs',
 			) ) ) ?>
 		</p>

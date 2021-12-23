@@ -27,28 +27,11 @@ Domain Path: /languages/
 
 $GLOBALS['aws_meta']['amazon-s3-and-cloudfront']['version'] = '1.0.3';
 
-require_once dirname( __FILE__ ) . '/classes/as3cf-compatibility-check.php';
-
-add_action( 'activated_plugin', array( 'AS3CF_Compatibility_Check', 'deactivate_other_instances' ) );
-
-global $as3cf_compat_check;
-$as3cf_compat_check = new AS3CF_Compatibility_Check(
-	'Aliyun OSS for WP Media',
-	'aliyun-oss-media',
-	__FILE__
-);
-
 /**
  * @throws Exception
  */
 function as3cf_init() {
 	if ( class_exists( 'Amazon_S3_And_CloudFront' ) ) {
-		return;
-	}
-
-	global $as3cf_compat_check;
-
-	if ( ! $as3cf_compat_check->is_compatible() ) {
 		return;
 	}
 

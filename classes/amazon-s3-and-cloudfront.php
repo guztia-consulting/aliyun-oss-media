@@ -5026,7 +5026,7 @@ class Amazon_S3_And_CloudFront extends AS3CF_Plugin_Base {
 			return sprintf( __( '<a href="%s">Define your access keys</a> to enable write access to the bucket', 'amazon-s3-and-cloudfront' ), '#settings' );
 		}
 
-		$url = $this->dbrains_url( '/wp-offload-media/doc/quick-start-guide/', array(
+		$url = $this->guztia_url( '/wp-offload-media/doc/quick-start-guide/', array(
 			'utm_campaign' => 'error+messages',
 		), 'bucket-restrictions' );
 
@@ -5264,8 +5264,8 @@ class Amazon_S3_And_CloudFront extends AS3CF_Plugin_Base {
 		$prefix = empty( $prefix ) ? '' : $prefix;
 		$suffix = empty( $suffix ) ? '' : $suffix;
 
-		$url  = $this->dbrains_url( $path, $args, $hash );
-		$link = AS3CF_Utils::dbrains_link( $url, $text );
+		$url  = $this->guztia_url( $path, $args, $hash );
+		$link = AS3CF_Utils::guztia_url( $url, $text );
 
 		return sprintf( '<span class="more-info">%s%s%s</span>', $prefix, $link, $suffix );
 	}
@@ -5337,10 +5337,10 @@ class Amazon_S3_And_CloudFront extends AS3CF_Plugin_Base {
 			'flash'             => false,
 		);
 
-		$doc_url  = $this->dbrains_url( '/wp-offload-media/doc/force-http-setting/', array(
+		$doc_url  = $this->guztia_url( '/wp-offload-media/doc/force-http-setting/', array(
 			'utm_campaign' => 'support+docs',
 		) );
-		$doc_link = AS3CF_Utils::dbrains_link( $doc_url, __( 'this doc' ) );
+		$doc_link = AS3CF_Utils::guztia_url( $doc_url, __( 'this doc' ) );
 
 		$message = sprintf( '<strong>%s</strong> &mdash; ', __( 'WP Offload Media Feature Removed', 'amazon-s3-and-cloudfront' ) );
 		$message .= sprintf( __( 'You had the "Always non-SSL" option selected in your settings, but we\'ve removed this option in version 1.3. We\'ll now use HTTPS when the request is HTTPS and regular HTTP when the request is HTTP. This should work fine for your site, but please take a poke around and make sure things are working ok. See %s for more details on why we did this and how you can revert back to the old behavior.', 'amazon-s3-and-cloudfront' ), $doc_link );
@@ -5749,7 +5749,7 @@ class Amazon_S3_And_CloudFront extends AS3CF_Plugin_Base {
 			'amazon-s3-and-cloudfront-assets-pull' => array(
 				'title'  => __( 'Assets Pull', 'amazon-s3-and-cloudfront' ),
 				'sub'    => __( 'An addon for WP Offload Media to serve your site\'s JS, CSS, and other enqueued assets from Amazon CloudFront or another CDN.', 'amazon-s3-and-cloudfront' ),
-				'url'    => $this->dbrains_url( '/wp-offload-media/doc/assets-pull-addon/', array(
+				'url'    => $this->guztia_url( '/wp-offload-media/doc/assets-pull-addon/', array(
 					'utm_campaign' => 'addons+install',
 				) ),
 				'label'  => __( 'Feature', 'amazon-s3-and-cloudfront' ),

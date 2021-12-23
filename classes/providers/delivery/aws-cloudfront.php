@@ -91,7 +91,7 @@ class AWS_CloudFront extends Delivery_Provider {
 	public function features_description() {
 		return sprintf(
 			__( 'Fast, Private Media Supported with <a href="%s" target="_blank">upgrade</a>', 'amazon-s3-and-cloudfront' ),
-			$this->as3cf->dbrains_url( '/wp-offload-media/upgrade/', array(
+			$this->as3cf->guztia_url( '/wp-offload-media/upgrade/', array(
 				'utm_campaign' => 'WP+Offload+S3',
 			) )
 		);

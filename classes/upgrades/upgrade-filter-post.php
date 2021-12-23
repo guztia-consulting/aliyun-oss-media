@@ -395,10 +395,10 @@ abstract class Upgrade_Filter_Post extends Upgrade {
 	 */
 	protected function get_generic_message() {
 		$link_text = __( 'See our documentation', 'amazon-s3-and-cloudfront' );
-		$url       = $this->as3cf->dbrains_url( '/wp-offload-media/doc/content-filtering-upgrade', array(
+		$url       = $this->as3cf->guztia_url( '/wp-offload-media/doc/content-filtering-upgrade', array(
 			'utm_campaign' => 'support+docs',
 		) );
-		$link      = AS3CF_Utils::dbrains_link( $url, $link_text );
+		$link      = AS3CF_Utils::guztia_url( $url, $link_text );
 
 		return sprintf( __( '%s for details on why we&#8217;re doing this, why it runs slowly, and how to make it run faster.', 'amazon-s3-and-cloudfront' ), $link );
 	}

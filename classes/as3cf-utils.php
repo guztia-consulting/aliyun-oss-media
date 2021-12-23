@@ -363,7 +363,7 @@ if ( ! class_exists( 'AS3CF_Utils' ) ) {
 		 *
 		 * @return string
 		 */
-		public static function dbrains_link( $url, $text ) {
+		public static function guztia_url( $url, $text ) {
 			return sprintf( '<a href="%s">%s</a>', esc_url( $url ), esc_html( $text ) );
 		}
 

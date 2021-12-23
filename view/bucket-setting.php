@@ -65,11 +65,11 @@ if ( is_wp_error( $selected_region ) ) {
 			</p>
 			<?php
 			if ( true === $public_access_blocked && ! $this->get_delivery_provider()->use_signed_urls_key_file_allowed() ) {
-				$cloudfront_setup_doc = $this->dbrains_url(
+				$cloudfront_setup_doc = $this->guztia_url(
 					'/wp-offload-media/doc/cloudfront-setup/',
 					array( 'utm_campaign' => 'support+docs', 'utm_content' => 'change+bucket+access' )
 				);
-				$bucket_settings_doc  = $this->dbrains_url(
+				$bucket_settings_doc  = $this->guztia_url(
 					'/wp-offload-media/doc/settings/',
 					array( 'utm_campaign' => 'support+docs', 'utm_content' => 'change+bucket+access' ),
 					'bucket'
