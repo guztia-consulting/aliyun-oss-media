@@ -28,6 +28,11 @@ abstract class Storage_Provider extends Provider {
 	/**
 	 * @var string
 	 */
+	protected static $use_server_roles_setting_namespace = 'roura';
+
+	/**
+	 * @var string
+	 */
 	protected static $use_server_roles_setting_name = 'use-server-roles';
 
 	/**
