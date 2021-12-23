@@ -48,11 +48,6 @@ function as3cf_init() {
 
 	global $as3cf_compat_check;
 
-	if ( method_exists( 'AS3CF_Compatibility_Check', 'is_plugin_active' ) && $as3cf_compat_check->is_plugin_active( 'amazon-s3-and-cloudfront-pro/amazon-s3-and-cloudfront-pro.php' ) ) {
-		// Don't load if pro plugin installed
-		return;
-	}
-
 	if ( ! $as3cf_compat_check->is_compatible() ) {
 		return;
 	}
@@ -61,7 +56,7 @@ function as3cf_init() {
 	$abspath = dirname( __FILE__ );
 
 	// Autoloader.
-	require_once $abspath . '/wp-offload-media-autoloader.php';
+	require_once $abspath . '/aliyun-oss-media-autoloader.php';
 
 	require_once $abspath . '/include/functions.php';
 	require_once $abspath . '/classes/as3cf-utils.php';
