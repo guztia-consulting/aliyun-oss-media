@@ -13,3 +13,6 @@ define('ACOSSM_SETTINGS', serialize([
 Just replace the `***************` fields with the actual credentials.
 
 From here, the plugin will ask for an existing bucket to use for this. Select the region and set the bucket name and that should be it.
+
+The recommended configuration for the plugin in most of cases is:
+![Aliyun OSS Media](assets/img/aliyun-oss-media.png)
