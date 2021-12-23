@@ -134,7 +134,7 @@ class Amazon_S3_And_CloudFront extends AS3CF_Plugin_Base {
 	 * @var array
 	 */
 	protected static $settings_constants = array(
-		'AS3CF_SETTINGS',
+		'ACOSSM_SETTINGS',
 		'WPOS3_SETTINGS',
 	);
 
@@ -427,7 +427,7 @@ class Amazon_S3_And_CloudFront extends AS3CF_Plugin_Base {
 	 * @return string
 	 */
 	function get_plugin_page_title() {
-		return apply_filters( 'as3cf_settings_page_title', $this->plugin_title );
+		return apply_filters( 'acossm_settings_page_title', $this->plugin_title );
 	}
 
 	/**
@@ -436,7 +436,7 @@ class Amazon_S3_And_CloudFront extends AS3CF_Plugin_Base {
 	 * @return string
 	 */
 	function get_plugin_menu_title() {
-		return apply_filters( 'as3cf_settings_menu_title', $this->plugin_menu_title );
+		return apply_filters( 'acossm_settings_menu_title', $this->plugin_menu_title );
 	}
 
 	/**
@@ -3985,7 +3985,7 @@ class Amazon_S3_And_CloudFront extends AS3CF_Plugin_Base {
 			'support' => _x( 'Support', 'Show the support tab', 'amazon-s3-and-cloudfront' ),
 		);
 
-		return apply_filters( 'as3cf_settings_tabs', $tabs );
+		return apply_filters( 'acossm_settings_tabs', $tabs );
 	}
 
 	/**
@@ -4523,14 +4523,14 @@ class Amazon_S3_And_CloudFront extends AS3CF_Plugin_Base {
 		$output .= esc_html( ( defined( 'AS3CF_REGION' ) ) ? AS3CF_REGION : 'Not defined' );
 		$output .= "\r\n";
 
-		$output .= 'AS3CF_SETTINGS: ';
+		$output .= 'ACOSSM_SETTINGS: ';
 
 		$settings_constant = $this::settings_constant();
 
 		if ( $settings_constant ) {
 			$output .= 'Defined';
 
-			if ( 'AS3CF_SETTINGS' !== $settings_constant ) {
+			if ( 'ACOSSM_SETTINGS' !== $settings_constant ) {
 				$output .= ' (using ' . $settings_constant . ')';
 			}
 
@@ -4539,7 +4539,7 @@ class Amazon_S3_And_CloudFront extends AS3CF_Plugin_Base {
 				$output .= ' - *EMPTY*';
 			} else {
 				$output .= "\r\n";
-				$output .= 'AS3CF_SETTINGS Keys: ' . implode( ', ', array_keys( $defined_settings ) );
+				$output .= 'ACOSSM_SETTINGS Keys: ' . implode( ', ', array_keys( $defined_settings ) );
 			}
 		} else {
 			$output .= 'Not defined';
