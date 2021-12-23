@@ -11,7 +11,7 @@ abstract class AS3CF_Plugin_Base {
 	 */
 	protected static $settings_constants = array();
 
-	protected static $plugin_page = 'amazon-s3-and-cloudfront';
+	protected static $plugin_page = 'aliyun-oss-media';
 	protected $default_tab = '';
 
 	protected $plugin_file_path;
